@@ -1,22 +1,30 @@
-services:
-  - type: web
-    name: n8n
-    env: node
-    buildCommand: npm install
-    startCommand: npm start
-    envVars:
-      - key: N8N_BASIC_AUTH_ACTIVE
-        value: true
-      - key: N8N_BASIC_AUTH_USER
-        value: admin
-      - key: N8N_BASIC_AUTH_PASSWORD
-        generateValue: true
-      - key: N8N_HOST
-        value: 0.0.0.0
-      - key: N8N_PORT
-        value: 10000
-      - key: WEBHOOK_URL
-        fromService:
-          type: web
-          name: n8n
-          property: host
+envVars:
+  - key: N8N_BASIC_AUTH_ACTIVE
+    value: true
+  - key: N8N_BASIC_AUTH_USER
+    value: admin
+  - key: N8N_BASIC_AUTH_PASSWORD
+    generateValue: true
+  - key: N8N_HOST
+    value: 0.0.0.0
+  - key: N8N_PORT
+    value: 10000
+  - key: WEBHOOK_URL
+    fromService:
+      type: web
+      name: n8n
+      property: host
+
+  # 🔗 Conexión persistente a Supabase
+  - key: DB_TYPE
+    value: postgres
+  - key: DB_POSTGRESDB_HOST
+    value: db.dkzimmdcdmntvbaxfnb.supabase.co
+  - key: DB_POSTGRESDB_PORT
+    value: 5432
+  - key: DB_POSTGRESDB_DATABASE
+    value: postgres
+  - key: DB_POSTGRESDB_USER
+    value: postgres
+  - key: DB_POSTGRESDB_PASSWORD
+    value: Iuris123n8n
