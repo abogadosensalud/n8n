@@ -17,7 +17,7 @@ envVars:
   - key: DB_TYPE
     value: postgresdb
   - key: DB_POSTGRESDB_HOST
-    value: db.dkzimmdcdmntvbaxfnb.supabase.co
+    value: db.dkzimmdcdmmtvabaxfnb.supabase.co
   - key: DB_POSTGRESDB_PORT
     value: 5432
   - key: DB_POSTGRESDB_DATABASE
