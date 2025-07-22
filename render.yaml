@@ -6,18 +6,16 @@ envVars:
   - key: N8N_BASIC_AUTH_PASSWORD
     generateValue: true
   - key: N8N_HOST
-    value: 0.0.0.0
+    value: n8n-qqc1.onrender.com
   - key: N8N_PORT
-    value: 10000
+    value: 5678
   - key: WEBHOOK_URL
-    fromService:
-      type: web
-      name: n8n
-      property: host
+    value: https://n8n-qqc1.onrender.com/
+  - key: N8N_RUNNERS_ENABLED
+    value: true
 
-  # 🔗 Conexión persistente a Supabase
   - key: DB_TYPE
-    value: postgres
+    value: postgresdb
   - key: DB_POSTGRESDB_HOST
     value: db.dkzimmdcdmntvbaxfnb.supabase.co
   - key: DB_POSTGRESDB_PORT
